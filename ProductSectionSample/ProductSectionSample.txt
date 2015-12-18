@@ -1,0 +1,69 @@
+﻿ProductSectionSample.exe https://us-california-1-3.vchs.vmware.com user@mycompany.com@ec7274ed-9999-43fa-9999-b3611e
+78aa99 %VCA_PASS% VDC1 CleanVAPP
+
+Vcloud Login
+Ignoring the Certificate Validation using FakeSSLSocketFactory - DO NOT DO THIS
+IN PRODUCTION
+        Login Success
+
+
+WARNING: the vApp must be powered off to update OVF properties.
+
+
+Initial Product Properties for vApp CleanVAPP
+
+No Product Sections
+
+
+Adding a new vApp Custom Property...
+
+
+New Product Properties for vApp CleanVAPP
+
+Property Section:   Information about the installed software with id:
+Property:
+    Label: newStampLabel
+    Key: newStampKey
+    Description:
+    Single Value: 12/18/2015 12:38:49 PM
+
+
+Updating the vApp Custom Property timestamp value...
+
+
+Updated Product Properties for vApp CleanVAPP
+
+Property Section:   Information about the installed software with id:
+Property:
+    Label: newStampLabel
+    Key: newStampKey
+    Description:
+    Single Value: 12/18/2015 12:38:54 PM
+
+
+
+
+// Sample of Reading properties from within Guest OS with vmware tools
+
+root@VM-9cv6:~# vmtoolsd --cmd "info-get guestinfo.ovfEnv"
+<?xml version="1.0" encoding="UTF-8"?>
+<Environment
+     xmlns="http://schemas.dmtf.org/ovf/environment/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:oe="http://schemas.dmtf.org/ovf/environment/1"
+     xmlns:ve="http://www.vmware.com/schema/ovfenv"
+     oe:id=""
+     ve:vCenterId="vm-87893">
+   <PlatformSection>
+      <Kind>VMware ESXi</Kind>
+      <Version>5.5.0</Version>
+      <Vendor>VMware, Inc.</Vendor>
+      <Locale>en</Locale>
+   </PlatformSection>
+   <PropertySection>
+         <Property oe:key="newStampKey" oe:value="12/18/2015 12:38:54 PM"/>
+   </PropertySection>
+   <ve:EthernetAdapterSection>
+      <ve:Adapter ve:mac="00:50:56:1d:2e:78" ve:network="vxw-dvs-35-virtualwire-11835-sid-526023-dvs.VCDVSdefault-routed-network-ca1a6123" ve:unitNumber="7"/>
+   </ve:EthernetAdapterSection>
+</Environment>
