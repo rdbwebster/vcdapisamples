@@ -2,6 +2,8 @@
 
 ## Vmware VCloud Director .Net C# API examples
 
+These are additional C# Samples for the .Net C# API
+There are a large number of samples that ship with the vCloud SDK for .NET (download link below)
 Samples are shown against a VMWare vCloud Air Target Environment
 
 #### Dependencies:
@@ -43,4 +45,5 @@ The following DLLs must be taken from the vCloud SDK and copied to to the same f
 
 #####Public Forums
 Questions .Net SDK API Forum : http://developercenter.vmware.com/forums?id=3895
+
 Questions  vCloud API Forum  : http://developercenter.vmware.com/forums?id=3221

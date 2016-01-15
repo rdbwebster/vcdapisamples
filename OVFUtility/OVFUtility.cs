@@ -1,6 +1,14 @@
-﻿using System;
+﻿/*
+ * *******************************************************
+ * Copyright VMware, Inc. 2010-2013.  All Rights Reserved.
+ * *******************************************************
+ * This is a helper class intended for debug purposes.
+ * It reads and writes the OVF Environment of a vApp (containing its Product Properties) to a flat file.
+ * It also reads the product properties of the vApps contained VMs and writes them to the console.
+ */
+
+using System;
 using System.Net;
-using System.Linq;
 using com.vmware.vcloud.sdk;
 using com.vmware.vcloud.sdk.utility;
 using com.vmware.vcloud.api.rest.schema;
@@ -26,7 +34,7 @@ namespace ProductSectionSample
         /// Main method, which does Adding, Updating and Deleting a ProductSection
         /// </summary>
         /// <param name="args">args</param>
-        /// Args[0] : VersionUrl
+        /// Args[0] : url of vCD API endpoint
         /// Args[1] : User Name
         /// Args[2] : Password
         /// Args[3] : VDC Name
@@ -177,17 +185,7 @@ namespace ProductSectionSample
             Console.Read();
             Environment.Exit(0);
         }
-        /// <summary>
-        /// Main method, which does Adding, Updating and Deleting a ProductSection
-        /// </summary>
-        /// <param name="args">args</param>
-        /// Args[0] : VersionUrl
-        /// Args[1] : User Name
-        /// Args[2] : Password
-        /// Args[3] : VDC Name
-        /// Args[4] : vApp Name
-        /// Args[5] : LocalCertificatePath[optional]
-        /// </param>
+      
 
 
         /// <summary>
